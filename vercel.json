@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/daily_trends.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/daily-trends",
+      "dest": "/api/daily_trends.py"
+    },
+    {
+      "src": "/api/related-topics",
+      "dest": "/api/daily_trends.py"
+    }
+  ]
+}
